@@ -6,6 +6,13 @@ import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { ShoppingCart } from 'shared/models/shopping-cart';
 import { OrderService } from 'shared/services/order.service';
 
+export interface Shipping{
+  addressLine2: string;
+  addressLine1: string;
+  city: string;
+  name: string;
+}
+
 
 @Component({
   selector: 'shipping-form',
@@ -37,12 +44,4 @@ export class ShippingFormComponent implements OnInit, OnDestroy {
     let result = await this.orderService.palceOrder(order);
     this.router.navigate(['/order-success', result.key]);
   }    
-}
-
-
-export interface Shipping{
-  addressLine2: string;
-  addressLine1: string;
-  city: string;
-  name: string;
 }

@@ -3,6 +3,7 @@ import { ShoppingCartService } from 'shared/services/shopping-cart.service';
 import { Component, OnInit } from '@angular/core';
 import { ShoppingCartItem } from 'shared/models/shopping-cart-item';
 
+
 @Component({
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',

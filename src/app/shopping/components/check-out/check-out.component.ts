@@ -11,7 +11,6 @@ import { ShoppingCartItem } from 'shared/models/shopping-cart-item';
 })
 export class CheckOutComponent implements OnInit {
   cart$: Observable<ShoppingCart>;
-  carr: ShoppingCart;
   constructor(private shoppingCartService: ShoppingCartService) { }
 
   async ngOnInit() {
