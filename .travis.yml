@@ -11,3 +11,16 @@ before_install:
 
 sctipt:
    - docker run ddbogdanovich/angular_docker npm run test --watch=false
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-angular"
+  env: "DockerAngular-env"
+  bucket_name: "elasticbeanstalk-us-east-2-160876748667"
+  bucket_path: "docker-angular"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
