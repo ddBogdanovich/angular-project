@@ -14,10 +14,10 @@ sctipt:
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-east-2"
+  region: "docker-angular"
   app: "docker-angular"
   env: "DockerAngular-env"
-  bucket_name: "elasticbeanstalk-us-east-2-160876748667"
+  bucket_name: "elasticbeanstalk-us-east-1-160876748667"
   bucket_path: "docker-angular"
   on:
     branch: master
