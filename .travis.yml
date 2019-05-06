@@ -16,7 +16,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
   app: "AngularShopDocker"
-  env: "Angularshopdocker-env"
+  env: "Angularshopdocker-env-1"
   bucket_name: "elasticbeanstalk-us-east-1-160876748667"
   bucket_path: "AngularShopDocker"
   on:
