@@ -1,7 +1,7 @@
 ##### Stage 1
 FROM node:8 as node
 WORKDIR /app
-COPY package.json .
+COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build -- --prod
