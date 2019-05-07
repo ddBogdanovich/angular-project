@@ -1,10 +1,10 @@
 ##### Stage 1
-FROM node:10 as builder
+FROM node:alpine as builder
 WORKDIR /app
 COPY package.json .
 RUN npm install
 COPY . .
-RUN npm run build -- --prod
+RUN npm run build
 
 ##### Stage 2
 FROM nginx:alpine
