@@ -7,7 +7,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t ddbogdanovich/angular_docker -f Dockerfile .
+  - docker build -t ddbogdanovich/angular_docker -f Dockerfile.dev .
 
 sctipt:
    - docker run ddbogdanovich/angular_docker npm run test --watch=false
@@ -15,10 +15,10 @@ sctipt:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "AngularShopDocker"
-  env: "Angularshopdocker-env-1"
+  app: "AngularAppDocker"
+  env: "Angularappdocker-env"
   bucket_name: "elasticbeanstalk-us-east-1-160876748667"
-  bucket_path: "AngularShopDocker"
+  bucket_path: "AngularAppDocker"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
