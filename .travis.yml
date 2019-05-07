@@ -1,12 +1,13 @@
 language: node_js
 node_js:
-  - "10"
+  - "7"
   
 sudo: required
 services:
   - docker
 
 before_install:
+  - npm install -g node-gyp
   - docker build -t ddbogdanovich/angular_docker -f Dockerfile.dev .
 
 sctipt:
