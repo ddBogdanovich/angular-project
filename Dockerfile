@@ -1,12 +1,12 @@
 ##### Stage 1
 FROM node:alpine as builder
-WORKDIR /app
+WORKDIR '/app'
 COPY package.json .
 RUN npm install
 COPY . .
 RUN npm run build
 
 ##### Stage 2
-FROM nginx:alpine
+FROM nginx
 EXPOSE 80
-COPY --from=builder /app/dist/* /usr/share/nginx/html
+COPY --from=builder /app/dist/ /usr/share/nginx/html
