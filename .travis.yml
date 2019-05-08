@@ -16,10 +16,10 @@ sctipt:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "AngularAppDocker"
-  env: "Angularappdocker-env"
+  app: "angApp"
+  env: "Angapp-env"
   bucket_name: "elasticbeanstalk-us-east-1-160876748667"
-  bucket_path: "AngularAppDocker"
+  bucket_path: "angApp"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
