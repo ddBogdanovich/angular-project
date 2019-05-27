@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-order-success',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderSuccessComponent implements OnInit {
 
-  constructor() { }
+  totalSum: number;
+
+  constructor(private route: ActivatedRoute) { 
+    this.totalSum = + this.route.snapshot.params["id"];
+  }
 
   ngOnInit() {
   }

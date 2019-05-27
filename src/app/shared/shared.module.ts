@@ -15,6 +15,7 @@ import { OrderService } from 'shared/services/order.service';
 import { ProductService } from 'shared/services/product.service';
 import { ShoppingCartService } from 'shared/services/shopping-cart.service';
 import { UserService } from 'shared/services/user.service';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { UserService } from 'shared/services/user.service';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     ReactiveFormsModule,
+    NgxPayPalModule,
     NgbModule.forRoot()
   ],
   exports: [
@@ -41,6 +43,7 @@ import { UserService } from 'shared/services/user.service';
     DataTableModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    NgxPayPalModule,
     NgbModule.forRoot().ngModule
   ],
   providers: [

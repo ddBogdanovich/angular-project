@@ -1,3 +1,15 @@
-<p>
-  order-success works!
-</p>
+<div class="alert alert-success" role="alert">
+    Your order has been placed successfully!
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="Radios" id="Radios1" (change)="showPayment = false">
+    <label class="form-check-label" for="Radios1">Pay on delivery</label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="Radios" id="Radios2" (change)="showPayment = true">
+    <label class="form-check-label" for="Radios2">Pay online</label>
+</div>
+<div *ngIf="showPayment">
+    <app-paypal [totalSum]="totalSum"></app-paypal>
+</div>

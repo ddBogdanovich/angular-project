@@ -1,6 +1,7 @@
 import { SharedModule } from 'shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { NgxPayPalModule } from 'ngx-paypal';
 import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './components/products/products.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
@@ -12,6 +13,7 @@ import { ShippingFormComponent } from './components/shipping-form/shipping-form.
 import { ShoppingCartSummaryComponent } from './components/shopping-cart-summary/shopping-cart-summary.component';
 import { RouterModule } from '@angular/router';
 import { AuthGuardService } from 'shared/services/auth-guard.service';
+import { PaypalComponent } from './components/paypal/paypal.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +24,12 @@ import { AuthGuardService } from 'shared/services/auth-guard.service';
     MyOrdersComponent,
     ProductFilterComponent,
     ShippingFormComponent,
-    ShoppingCartSummaryComponent
+    ShoppingCartSummaryComponent,
+    PaypalComponent
   ],
   imports: [
     SharedModule,
+    NgxPayPalModule,
     RouterModule.forChild([
       {path: 'products', component: ProductsComponent},
       {path: 'shopping-cart', component: ShoppingCartComponent},
